@@ -1,0 +1,7 @@
+FROM ubuntu:20.04
+
+LABEL maintainer.0="Yusaku Maezono (@zono)"
+
+WORKDIR /zpy
+
+CMD ["/bin/bash"]
