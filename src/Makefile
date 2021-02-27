@@ -1,5 +1,5 @@
 # tpvm only takes compiled byte codes (.tpc files)
-tpvm: tpvm.c
+tpvm: tp.c vmmain.c
 	@$(CC) $(CFLAGS) -o $@ $^
 
 clean:
