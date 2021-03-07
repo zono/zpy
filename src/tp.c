@@ -10,6 +10,7 @@ tp_vm *tp_init(int argc, char *argv[])
 
 tp_obj tp_string_atom(TP, const char *v)
 {
+  static tpd_string info = {0};
   tp_obj r;
   return r;
 }

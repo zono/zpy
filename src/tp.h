@@ -5,6 +5,11 @@
 
 #define TP tp_vm *tp
 
+enum TPTypeID
+{
+  TP_STRING = 100
+};
+
 typedef struct tp_vm
 {
   double time_limit;
@@ -13,6 +18,21 @@ typedef struct tp_vm
 typedef struct tp_obj
 {
 } tp_obj;
+
+typedef union
+{
+  struct
+  {
+    unsigned int grey : 1;
+    unsigned int black : 1;
+  };
+  int i;
+} TPGCMask;
+
+typedef struct tpd_string
+{
+  TPGCMask gci;
+} tpd_string;
 
 tp_vm *tp_init(int argc, char *argv[]);
 
